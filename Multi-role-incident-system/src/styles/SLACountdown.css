@@ -1,0 +1,72 @@
+.sla-countdown {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    border-radius: 99px;
+    padding: 0.2rem 0.65rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+    border: 1px solid transparent;
+}
+
+.sla-ok {
+    background: rgba(63, 185, 80, 0.12);
+    border-color: rgba(63, 185, 80, 0.3);
+    color: #3fb950;
+}
+
+.sla-urgent {
+    background: rgba(210, 153, 34, 0.12);
+    border-color: rgba(210, 153, 34, 0.4);
+    color: #d29922;
+    animation: pulse-urgent 1.5s ease-in-out infinite;
+}
+
+.sla-breached {
+    background: rgba(248, 81, 73, 0.12);
+    border-color: rgba(248, 81, 73, 0.4);
+    color: #f85149;
+    animation: pulse-breach 1s ease-in-out infinite;
+}
+
+.sla-done {
+    background: rgba(99, 110, 123, 0.12);
+    border-color: rgba(99, 110, 123, 0.3);
+    color: var(--text-muted);
+}
+
+.sla-icon {
+    font-size: 0.7rem;
+}
+
+.sla-timer {
+    font-family: 'JetBrains Mono', 'Fira Mono', monospace;
+}
+
+@keyframes pulse-urgent {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes pulse-breach {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.02);
+    }
+}

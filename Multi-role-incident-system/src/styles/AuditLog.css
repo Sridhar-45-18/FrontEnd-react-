@@ -1,0 +1,125 @@
+.audit-log {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.audit-log::before {
+    content: '';
+    position: absolute;
+    left: 0.45rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+    border-radius: 2px;
+}
+
+.audit-entry {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+    padding: 0.6rem 0;
+    position: relative;
+}
+
+.audit-timeline-dot {
+    position: absolute;
+    left: -1.05rem;
+    top: 1rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-hover);
+    border: 2px solid var(--bg-secondary);
+    flex-shrink: 0;
+}
+
+.audit-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.audit-transition {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.audit-status {
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.76rem;
+}
+
+.audit-prev {
+    background: rgba(139, 148, 158, 0.12);
+    color: var(--text-secondary);
+}
+
+.audit-next {
+    background: rgba(108, 99, 255, 0.12);
+    color: #a89fff;
+}
+
+.audit-arrow {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.audit-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.audit-actor {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--actor-color, #8b949e);
+}
+
+.audit-time {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+.audit-reason {
+    font-size: 0.76rem;
+    color: var(--text-secondary);
+    background: var(--bg-elevated);
+    border-left: 2px solid var(--border-hover);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.audit-reason-label {
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.audit-tab-content {
+    padding-top: 0.25rem;
+}
+
+.audit-intro {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    font-style: italic;
+}
+
+.audit-empty {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
